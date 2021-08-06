@@ -1,5 +1,6 @@
 import config from './configs/app';
 import Server from './server';
+import MongooseConnection from './dataAccess';
 
 interface IApplication {
   _server: Server;
@@ -12,7 +13,9 @@ class Application implements IApplication {
     this._server = new Server();
   }
 
-  async accessDatabase() {}
+  async accessDatabase() {
+    await MongooseConnection.connect();
+  }
 
   start() {
     ((port = config.APP_PORT || 5007) => {

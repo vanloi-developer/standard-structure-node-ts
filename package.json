@@ -29,6 +29,7 @@
     },
     "homepage": "https://github.com/vanloi-developer/standard-structure-node-ts#readme",
     "devDependencies": {
+        "@types/cors": "^2.8.12",
         "@types/dotenv": "^8.2.0",
         "@types/express": "^4.17.13",
         "@types/jest": "^26.0.24",
@@ -51,6 +52,7 @@
         "typescript": "^4.3.5"
     },
     "dependencies": {
+        "cors": "^2.8.5",
         "express": "^4.17.1"
     }
 }

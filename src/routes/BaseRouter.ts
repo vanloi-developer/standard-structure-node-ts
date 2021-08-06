@@ -3,7 +3,7 @@ import { Router } from 'express';
 abstract class BaseRouter {
   private _router: Router = Router();
 
-   get router(): Router {
+  get router(): Router {
     return this._router;
   }
 
@@ -11,4 +11,4 @@ abstract class BaseRouter {
 }
 
 Object.seal(BaseRouter);
-export = BaseRouter
+export = BaseRouter;

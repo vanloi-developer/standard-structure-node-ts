@@ -19,7 +19,10 @@ class Application implements IApplication {
 
   start() {
     ((port = config.APP_PORT || 5007) => {
-      this._server._app.listen(port, () => console.log(`Server is running at ${config.APP_HOST}:${port}`));
+      this._server._app.listen(port, () => {
+        console.log(`Server is running at ${config.APP_HOST}:${port}`);
+      });
+
       this._server._app.use('/api', this._server._routes);
     })();
   }

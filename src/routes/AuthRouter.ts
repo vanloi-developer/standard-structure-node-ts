@@ -6,7 +6,13 @@ class AuthRoutes extends BaseRouter {
     this.init();
   }
 
-  protected init() {}
+  protected init() {
+    this.router.post('/Authenticate', (req, res, next)=> {
+      res.status(200).json({
+        message: `Current login info`
+      })
+    })
+  }
 }
 
 Object.seal(AuthRoutes)

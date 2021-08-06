@@ -42,13 +42,6 @@ class UserRouter extends BaseRouter {
         message: `update user`,
       });
     });
-
-    this.router.post('/updateAvatar', (req: Request, res: Response, next: NextFunction) => {
-      return res.status(200).json({
-        success: true,
-        message: `Update avatar`,
-      });
-    });
   }
 }
 
